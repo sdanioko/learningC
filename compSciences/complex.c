@@ -110,6 +110,7 @@ void test()
 	
 	struct complex result1;
 	result1 = mult2(compl1,compl2);
+	complex_print(result1); /* print the result of the multiplication of two complex numbers*/
 	assert (expected1.x_realpart == result1.x_realpart);
 	assert (expected1.y_imagpart == result1.y_imagpart);
 
@@ -120,6 +121,7 @@ void test()
 
 	struct complex result2;
 	result2 = square(compl1);
+	complex_print(result2); /* print the result of the square of compl1*/
 	assert (expected2.x_realpart == result2.x_realpart);
 	assert (expected2.y_imagpart == result2.y_imagpart);
 
@@ -130,6 +132,7 @@ void test()
 
 	struct complex result3;
 	result3 = add2(compl1,compl2);
+	complex_print(result3); /* print the result of the addition of compl1 and compl2*/
 	assert (expected3.x_realpart == result3.x_realpart);
 	assert (expected3.y_imagpart == result3.y_imagpart);
 
@@ -139,7 +142,8 @@ void test()
 	expected4.y_imagpart = 8.; /* this is the imag part of the complex number obtained by adding the square of compl1 to compl2*/
 
 	struct complex result4;
-	result4 = juliamap(compl1,compl2);
+	result4 = juliamap(compl1,compl2); /* print the result of the juliamap*/
+	complex_print(result4);
 	assert (expected4.x_realpart == result4.x_realpart);
 	assert (expected4.y_imagpart == result4.y_imagpart);
 
