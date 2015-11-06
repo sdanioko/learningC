@@ -142,8 +142,8 @@ void test()
 	expected4.y_imagpart = 8.; /* this is the imag part of the complex number obtained by adding the square of compl1 to compl2*/
 
 	struct complex result4;
-	result4 = juliamap(compl1,compl2); /* print the result of the juliamap*/
-	complex_print(result4);
+	result4 = juliamap(compl1,compl2); 
+	complex_print(result4); /* print the result of the juliamap*/
 	assert (expected4.x_realpart == result4.x_realpart);
 	assert (expected4.y_imagpart == result4.y_imagpart);
 
