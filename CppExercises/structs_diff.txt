@@ -1,0 +1,29 @@
+In here, we have two codes that have one code that is written in C and another one in C++.  In both of the codes, we are working with two vectors; one 2D vector and one 3D vectors that are defined as structures. In both of the codes, the components of each of the vectors are defined to be long double.  Plus, we can notice that each of the code has 5 functions that act on the different structures that we have in our codes. Without loss of generality, one can say the two codes have almost the same semantics. However, one can see they are some differences that should require special attention.
+
+Among many other differences, one can see that in we have as recourse the use of the fact that in C++ structs have a typedef that is automatically defined.
+
+struct VEC3{
+
+                     }
+
+Struct VEC2 {
+
+                        }
+
+In contrast, C does not give us such a flexibility. In the sense that one has to declare first a structure, then alias a new struct type if the structure they previously defined.
+
+Also, we notice that C++ has the feature of overloading functions, whereas C does not have such a nice advantage. In addition to that, one can remark that the functions printVec and setVec of the C++ code use reference parameters. Opposed to that, the corresponding functions in C use pointers as arguments for the same purpose. Indeed, this constitutes one of the major difference between C++ and C. Furthermore, one can see that C++ we use cout to print out something to the screen; meanwhile C uses puts to do the same thing.
+
+Parallel to all these, one can see there is a difference on how the objects of structs in C++ and those of C. For example, In C++ we see
+
+                                                VEC3 v = VEC3();
+
+                                                VEC3 prime = VEC3();
+
+                                                VEC2 w = VEC2();
+
+And In C, we can notice
+
+                                                VEC3 v, vprime;
+
+                                                VEC2 w;   
