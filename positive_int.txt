@@ -1,0 +1,13 @@
+let's suppose that the maxSize  of bites we can have is 2^63
+For the sake simplicity, let's suppose that we have a string like 100010, which is given in base 2.
+In order to convert this into base 10, one should :
+	 look at the above string as an array a where a[0] = 1, a[1] = 0, a[2] = 0, a[3] = 0, a[4] =1, and a[5] = 0
+	
+To get our string in base 10, we need to compute a[o]*2^4 + a[1]*2^3 + a[2]*2 + a[3]*2^2 + a[4]*2^1 + a[5]*2^0
+
+In the case we keep increasing the positive value behond the number of bits to store it, we will have an overflow
+
+
+Now, let's suupose that we have a negative integer. for example -5. In order to get the binary representation of -5
+one should first have the binary representation of 5 which is 00101. From this, one should think of using  the mapping 2's
+ complement which will be 11010, then add 1 to the obtained result which will give us 11011.
