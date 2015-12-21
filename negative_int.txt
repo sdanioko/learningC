@@ -1,0 +1,9 @@
+let's suppose that the maxSize  of bites we can have is - 2^63
+
+Now, let's suupose that we have a negative integer. for example -5. In order to get the binary representation of -5
+one should first have the binary representation of 5 which is 00101. From this, one should think of using  the mapping 2's
+ complement which will be 11010, then add 1 to the obtained result which will give us 11011.
+
+ As well known, casting a negative integer will lead to a conversion of that integer to a positive one. This
+could be a source of many errors. Among many others, one could mention that
+this could bring computational overhead/
